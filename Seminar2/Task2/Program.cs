@@ -6,7 +6,6 @@
 //254 => 5^4 = 625
 //617 => 1
 
-
 Console.WriteLine("Введите трехзначное число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
@@ -17,16 +16,21 @@ if (num >= 100 && num <= 999 || num <= -100 && num >= -999)
 {
     int digit2 = num / 10 % 10;
     int digit3 = num % 10;
+
+    //Изменение знака третьей цифры, если трицательная
     if (digit3 < 0)
     {
         digit3 *= -1; //digit3 = digit3 * -1
     }
     
+    //Вычмсление возведения в степень
     while (count < digit3)
     {
         result = result * digit2;
         count ++;
     }
+
+    //Вычисление результата для отрицательной степени
     if (digit2 < 0)
     {
         result = 1 / result;
@@ -35,6 +39,7 @@ if (num >= 100 && num <= 999 || num <= -100 && num >= -999)
     
 }
 else
+//Отработка некорректного ввода
 {
     Console.WriteLine("Некорректный ввод");
 }
