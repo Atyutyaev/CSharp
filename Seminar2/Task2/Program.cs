@@ -11,17 +11,25 @@ Console.WriteLine("Введите трехзначное число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 
 int count = 0;
-int result = 1;
+double result = 1;
 
 if (num >= 100 && num <= 999 || num <= -100 && num >= -999)
 {
     int digit2 = num / 10 % 10;
     int digit3 = num % 10;
-
+    if (digit3 < 0)
+    {
+        digit3 *= -1; //digit3 = digit3 * -1
+    }
+    
     while (count < digit3)
     {
         result = result * digit2;
         count ++;
+    }
+    if (digit2 < 0)
+    {
+        result = 1 / result;
     }
     Console.WriteLine(result);
     
