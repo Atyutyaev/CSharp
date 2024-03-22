@@ -98,33 +98,10 @@
 // 8    => 8
 // 9542 => 9,5,4,2
 
-
-// Console.WriteLine("Введите число: ");
-// int num = Convert.ToInt32(Console.ReadLine());
-
-// if (num > 0)
-// {
-//     int digit1 = num / 100000;
-//     Console.Write(digit1 + ",");    
-//     int digit2 = num / 10000 - digit1 * 10;
-//     Console.Write(digit2 + ",");
-//     int digit3 = num / 1000 - digit1 * 100 - digit2 * 10;
-//     Console.Write(digit3 + ",");
-//     int digit4 = num / 100 - digit1 * 1000 - digit2 * 100 - digit3 * 10;
-//     Console.Write(digit4 + ",");
-//     int digit5 = num / 10 - digit1 * 10000 - digit2 * 1000 - digit3 * 100 - digit4 * 10;
-//     Console.Write(digit5 + ",");
-//     int digit6 = num % 10;  
-//     Console.Write(digit6 + ",");
-// }
-// else
-// {
-//     Console.WriteLine("Некорректный ввод");
-// }
 Console.WriteLine("Введите число: ");
 int num = Convert.ToInt32(Console.ReadLine());
 int result = 0;
-int y =  (int)Math.Log10(num) + 1;
+int y = (int)Math.Log10(num) + 1;
 while (num > 0)
 {
     result *= 10;
